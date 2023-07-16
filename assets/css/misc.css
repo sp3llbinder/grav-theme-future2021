@@ -39,9 +39,6 @@
 
 /* Styles for Langswitcher plugin */
 
-#header .main ul li.langswitcher {
-  margin-left: 0em !important;
-}
 #header .main ul li.langswitcher > a {
       text-decoration: none;
       border-bottom: 0;
@@ -102,9 +99,6 @@
 }
 
 /* Styles modified from Breadcrumbs */
-/* Included in headings.scss */
-
-/* Styles for Login plugin */
 
 @media screen and (max-width: 736px) {
   #header .main ul li.login-logout {

@@ -6,15 +6,15 @@
 {% set show_sidebar = header_var('show_sidebar')|defined(false)  %}
 
 {% if base_url == '/' %}
-	{% set base_url = '' %}
+  {% set base_url = '' %}
 {% endif %}
 
 {% if base_url == base_url_relative %}
-	{% set feed_url = base_url~'/'~page.parent.slug %}
+  {% set feed_url = base_url~'/'~page.parent.slug %}
 {% endif  %}
 
 {% block menu %}
-	{% include 'partials/sidebar_right.html.twig' %}
+  {% include 'partials/sidebar_right.html.twig' %}
 {% endblock %}
 
 {% block content %}

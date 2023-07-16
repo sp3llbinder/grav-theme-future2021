@@ -131,3 +131,4 @@ Alternatively, you can you use the drag-n-drop "Custom Logo" field in the Future
 # Future plans
 
 - Create a Flex Directory for authors and avatars.
+

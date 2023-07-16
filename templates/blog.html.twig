@@ -30,10 +30,21 @@
 {% endblock %}
 
 {% block content %}
-<article class="heading">
+    <header>
+      <div class="title">
+        <h2>{{ title }}</h2>
+        {% if listing_title %}
+          <p>{{ listing_title|raw }}</p>
+        {% endif %}
+      </div>
+    </header>
+    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
+      {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+    
     {% if image %}
     <span class="image featured">
-      {{ image.cropZoom(1038,437).loading('lazy').attribute('decoding','async').html(title, title)|raw }}
+      {{ image.cropZoom(1038,437).loading('lazy').html(title, title)|raw }}
     </span>
     {% endif %}
     <div class="title">
@@ -44,11 +55,7 @@
     </div>
     
     {{ page.content|raw }}
-    
-    {% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-      {% include 'partials/breadcrumbs.html.twig' %}
-    {% endif %}
-</article>
+
   {% for child in collection %}
     {% include 'partials/blog_item.html.twig' with {'page':child, 'title': child.title|raw, 'subtitle': child.header.subtitle|raw, 'listing': true, 'truncate':true} %}
   {% endfor %}

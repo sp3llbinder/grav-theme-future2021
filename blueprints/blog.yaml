@@ -31,8 +31,7 @@ form:
           fields:
 
             content_title:
-              type: section
-              underline: true
+              type: spacer
               title: FUTURE.ADMIN.BLOG.BLOG_CONTENT_TITLE
 
             header.content.items:
