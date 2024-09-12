@@ -54,8 +54,8 @@
     {% block stylesheets %}
       {% do assets.addCss('theme://assets/css/main'~compress) %}
       {% do assets.addCss('theme://assets/css/fontawesome-all.min.css',{'rel':'preload','as':'style','onload':'this.rel="stylesheet"'}) %}
-      {% do assets.addCss('theme://assets/css/misc.css', 10) %}
-      {% do assets.addCss('theme://assets/css/custom.css', 15) %}
+      {% do assets.addCss('theme://assets/css/misc.css', 9) %}
+      {% do assets.addCss('theme://assets/css/custom.css', 10) %}
       {% do assets.addCss('theme://assets/css/google-fonts' ~ google_fonts, {'priority': 20}) %}
     {% endblock %}
 
